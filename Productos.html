@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Productos</title>
+    <style>
+        header {
+            background-color: rgb(58, 143, 199);
+            text-align: center;
+            padding: 30px;
+            font-family: 'Helvetica', sans-serif;
+            font-size: 30px;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #307ecc;
+            padding: 10px;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            flex-wrap: wrap;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex: 1;
+        }
+
+        nav li {
+            margin-right: 10px;
+        }
+
+        nav form {
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+            max-width: 500px;
+            margin-left: auto;
+        }
+
+        nav input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 4px 0 0 4px;
+            font-family: 'Helvetica', sans-serif;
+            font-size: 16px;
+            color: #333;
+        }
+
+        nav input[type="text"]::placeholder {
+            color: #888;
+        }
+
+        nav button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 0 4px 4px 0;
+            font-family: 'Helvetica', sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        nav button:hover {
+            background-color: #555;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: 'Helvetica', sans-serif;
+            font-weight: bold;
+        }
+
+        li a:hover {
+            background-color: rgb(158, 184, 237);
+        }
+
+        /* Media queries para pantallas pequeñas */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            nav li {
+                width: 100%;
+                text-align: center;
+                margin-right: 0;
+            }
+
+            nav form {
+                width: 100%;
+                flex-direction: column;
+                margin-bottom: 10px;
+            }
+
+            nav input[type="text"] {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            nav button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .producto-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .producto {
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            font-family: 'Helvetica', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+
+        }
+
+        .producto img {
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .producto:hover img {
+            transform: scale(1.1);
+        }
+
+        .producto .descripcion {
+            margin-bottom: 10px;
+        }
+
+        /* Estilos adicionales para responsividad */
+        @media (max-width: 768px) {
+            .producto-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        footer {
+            border: 1px solid black;
+            padding: 25px 50px;
+            background-color: rgb(6, 42, 132);
+            color: white;
+            text-align: center;
+            font-family: 'Helvetica', sans-serif;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html" style="color: white; text-decoration: none;">Mi Farmacia Online</a></h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a class="active" href="index.html">Inicio</a></li>
+            <li><a href="index.html#Promociones">Promociones</a></li>
+            <li><a href="Productos.html">Productos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <form>
+            <input type="text" id="busqueda" placeholder="Buscar medicamento">
+            <button type="submit">Buscar</button>
+        </form>
+        <div id="resultados"></div> 
+    </nav>
+
+    <div class="producto-grid">
+        <div class="producto">
+            <p class="descripcion">Veridex Ivermectina</p>
+            <a href="detalle_producto1.html">
+                <img src="C:\Users\joaqu\Documentos Local\700326-1600-1600.webp" alt="Producto 1">
+            </a>
+        </div>
+        <div class="producto">
+            <p class="descripcion">TempraForte</p>
+            <a href="detalle_producto2.html">
+                <img src="C:\Users\joaqu\Documentos Local\TEMPRAFORTE24S_90.webp" alt="Producto 2">
+            </a>
+        </div>
+        <div class="producto">
+            <p class="descripcion">Treda</p>
+            <a href="detalle_producto3.html">
+                <img src="C:\Users\joaqu\Documentos Local\7501070612474_1.webp" alt="Producto 3">
+            </a>
+        </div>
+        <div class="producto">
+            <p class="descripcion">AderogylEfe</p>
+            <a href="detalle_producto4.html">
+                <img src="C:\Users\joaqu\Documentos Local\3664798027549.webp" alt="Producto 4">
+            </a>
+        </div>
+        <div class="producto">
+            <p class="descripcion">C-Blast</p>
+            <a href="detalle_producto5.html">
+                <img src="C:\Users\joaqu\Documentos Local\7506476200034_4_1.webp" alt="Producto 5">
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <section id="contacto">
+            <div>
+                <ul class="b">
+                    <h2>CONTACTO</h2>
+                    <i class="fas fa-phone">229-182-8157</i> <br>
+                    <i class="fas fa-map-marker-alt">Calle ZAMORA NO. 99 S/N, JALAPA ENRIQUEZ CENTRO, 91000 </i> <br>
+                    <i class="fas fa-envelope">MiFarmaciaOnline@gmail.com</i>
+                    <p>© 2024 Mi Farmacia Online. Todos los derechos reservados.</p> 
+                </ul>
+            </div>
+        </section>
+        <p></p>
+    </footer>
+    <script src="scripts1.js"></script>
+
+</body>
+
+</html>

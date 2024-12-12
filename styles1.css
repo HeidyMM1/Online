@@ -1,0 +1,256 @@
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(58, 143, 199);
+    text-align: center;
+    padding: 30px;
+    font-family: Helvetica, sans-serif;
+    font-size: 30px;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #307ecc;
+    padding: 10px;
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap; 
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex: 1; 
+}
+
+nav li {
+    margin-right: 10px;
+}
+
+nav form {
+    display: flex;
+    flex-direction: row; /* Mantiene los elementos en fila en pantallas grandes */
+    flex: 1; /* Para ocupar el espacio disponible */
+    max-width: 500px; /* Ajusta el tamaño según tus necesidades */
+    margin-left: auto; /* Empuja el formulario a la derecha */
+}
+
+nav input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px 0 0 4px; /* Ajusta los bordes para que el input y el botón se conecten */
+    font-family: 'Helvetica', sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+nav input[type="text"]::placeholder {
+    color: #888;
+}
+
+nav button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 0 4px 4px 0; /* Ajusta los bordes para que el input y el botón se conecten */
+    font-family: 'Helvetica', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #555;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color:rgb(158, 184, 237); ;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav li {
+        width: 100%;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    nav form {
+        width: 100%;
+        flex-direction: column; /* Coloca los elementos en columna */
+        margin-bottom: 10px;
+    }
+    
+    nav input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px; /* Espacio entre la barra de búsqueda y el botón */
+    }
+    
+    nav button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+li { 
+    float: left; 
+}
+
+li a { 
+    display: block;
+    color: rgb(255, 255, 255); 
+    text-align: center; 
+    padding: 14px 16px; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+li a:hover { 
+    background-color: rgb(158, 184, 237); 
+}
+
+.imagen-promocion {
+     display: block; width: 100%; 
+    position: relative;
+    height: auto; /* Mantiene la proporción */ 
+    margin: 20px 0; 
+}
+
+/* Sección de promociones */
+/* Sección de promociones */
+#OtrasPromociones {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples líneas */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    background-color: rgb(158, 184, 237);
+}
+
+#OtrasPromociones h2 {
+    color: #fefbfb;
+    font-size: 24px;
+    text-align: center;
+    width: 100%; /* Asegura que el título ocupe toda la línea */
+}
+
+.promo-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(158, 184, 237);
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    max-width: 250px; /* Ajusta el ancho máximo para cada item */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto */
+}
+
+.promo-item:hover {
+    transform: scale(1.05);
+}
+
+.promo-item img {
+    max-width: 100px; /* Ajusta el tamaño máximo de la imagen */
+    border-radius: 8px;
+}
+
+.promo-item-content {
+    text-align: center;
+}
+
+.promo-item h3 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.promo-item p {
+    color: #ffffff;
+    font-size: 14px;
+    display: none;
+}
+
+.promo-item:hover p {
+    display: block;
+}
+
+/* Media queries para responsividad */
+@media (min-width: 768px) {
+    #OtrasPromociones {
+        justify-content: center; /* Distribuye los elementos con espacio alrededor */
+    }
+    
+    .promo-item {
+        flex-direction: column;
+        max-width: 30%; /* Ajusta el ancho máximo para cada item en pantallas más grandes */
+        margin: 10px; /* Aumenta el espacio entre los items */
+    }
+    .promo-item:nth-child(odd) { 
+        margin-right: auto; 
+         margin-left: auto; 
+        }
+}
+                    #contacto {
+                         color: white;
+                          text-align: center; 
+                
+                         }
+                           #contacto p.solid { 
+                            border-style: solid; 
+                        } 
+                        #contacto ul.b { 
+                            list-style-type: square; 
+                        } 
+                         footer { 
+                            border: 1px solid black;
+                             padding: 25px 50px 25px;
+                              background-color: rgb(6, 42, 132); 
+                              color: white; text-align: center; 
+                              }
+                              @media (min-width: 768px) { 
+                                .promo-item { flex-direction: row;
+                              }
+                            }
